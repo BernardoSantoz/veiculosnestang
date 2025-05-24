@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "placa": "ABC1D23",
+    "chassi": "9BWZZZ377VT004251",
+    "renavam": "12345678900",
+    "modelo": "Gol",
+    "marca": "Volkswagen",
+    "ano": 2015
+  },
+  {
+    "id": 2,
+    "placa": "XYZ9H88",
+    "chassi": "9BG116GW04C400001",
+    "renavam": "22345678901",
+    "modelo": "Onix",
+    "marca": "Chevrolet",
+    "ano": 2020
+  },
+  {
+    "id": 3,
+    "placa": "DEF2G45",
+    "chassi": "9BD171Z07T0012345",
+    "renavam": "32345678902",
+    "modelo": "Uno",
+    "marca": "Fiat",
+    "ano": 2012
+  },
+  {
+    "id": 4,
+    "placa": "GHJ3K21",
+    "chassi": "8AFBR12H0E1234567",
+    "renavam": "42345678903",
+    "modelo": "Civic",
+    "marca": "Honda",
+    "ano": 2018
+  },
+  {
+    "id": 5,
+    "placa": "IJK8M90",
+    "chassi": "93YBGX8J0G1234567",
+    "renavam": "52345678904",
+    "modelo": "Corolla",
+    "marca": "Toyota",
+    "ano": 2022
+  },
+  {
+    "id": 6,
+    "placa": "LMN5P67",
+    "chassi": "93XBR12E0F1234567",
+    "renavam": "62345678905",
+    "modelo": "HB20",
+    "marca": "Hyundai",
+    "ano": 2021
+  },
+  {
+    "id": 7,
+    "placa": "OPQ6R54",
+    "chassi": "9BWZZZ377VT000111",
+    "renavam": "72345678906",
+    "modelo": "Polo",
+    "marca": "Volkswagen",
+    "ano": 2019
+  },
+  {
+    "id": 8,
+    "placa": "RST7S33",
+    "chassi": "9BG116GW04C400222",
+    "renavam": "82345678907",
+    "modelo": "Cruze",
+    "marca": "Chevrolet",
+    "ano": 2017
+  },
+  {
+    "id": 9,
+    "placa": "UVW8U22",
+    "chassi": "9BD171Z07T0011111",
+    "renavam": "92345678908",
+    "modelo": "Argo",
+    "marca": "Fiat",
+    "ano": 2023
+  },
+  {
+    "id": 10,
+    "placa": "XYZ9X11",
+    "chassi": "8AFBR12H0E1234999",
+    "renavam": "02345678909",
+    "modelo": "City",
+    "marca": "Honda",
+    "ano": 2024
+  }
+]

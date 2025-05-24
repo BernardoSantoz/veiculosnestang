@@ -1,0 +1,14 @@
+<div class="vehicle-list">
+  <div *ngFor="let vehicle of vehicles" class="card" (click)="selectVehicle(vehicle)">
+    <h3>{{ vehicle.marca }} {{ vehicle.modelo }} ({{ vehicle.ano }})</h3>
+    <p><strong>Placa:</strong> {{ vehicle.placa }}</p>
+    <p><strong>Chassi:</strong> {{ vehicle.chassi }}</p>
+    <p><strong>Renavam:</strong> {{ vehicle.renavam }}</p>
+  </div>
+  <app-vehicle-form
+    [vehicle]="selectedVehicle"
+    (closed)="selectedVehicle = null"
+    (saved)="handleSave($event)"
+    (deleted)="handleDelete($event)"
+  ></app-vehicle-form>
+</div>

@@ -1,0 +1,37 @@
+### list vehicles
+GET http://localhost:3000/vehicles
+
+### get vehicles
+GET http://localhost:3000/vehicles/1
+
+### get vehicles
+GET http://localhost:3000/vehicles/3
+
+### create vehicles
+POST http://localhost:3000/vehicles/
+Content-Type: application/json
+
+{
+  "placa": "DEF4G78",
+  "chassi": "9BD158225T0042547",
+  "renavam": "44556677889",
+  "modelo": "Uno",
+  "marca": "Fiat",
+  "ano": 1996
+}
+
+### update vehicles
+PATCH http://localhost:3000/vehicles/1
+Content-Type: application/json
+
+{
+    "placa": "string",
+    "chassi": "string",
+    "renavam": "string",
+    "modelo": "string",
+    "marca": "string",
+    "ano": 1992
+}
+
+### delete vehicles
+DELETE http://localhost:3000/vehicles/2

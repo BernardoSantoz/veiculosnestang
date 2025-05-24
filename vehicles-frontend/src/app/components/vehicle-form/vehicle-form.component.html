@@ -1,0 +1,38 @@
+<div *ngIf="vehicle">
+  <div class="backdrop" (click)="close()"></div>
+
+  <div class="editform">
+    <h2>Editando: {{ vehicle.modelo }} - {{ vehicle.placa }}</h2>
+    <form>
+      <label>Modelo:
+        <input [(ngModel)]="vehicle.modelo" name="modelo" />
+      </label>
+
+      <label>Marca:
+        <input [(ngModel)]="vehicle.marca" name="marca" />
+      </label>
+
+      <label>Placa:
+        <input [(ngModel)]="vehicle.placa" name="placa" />
+      </label>
+
+      <label>Chassi:
+        <input [(ngModel)]="vehicle.chassi" name="chassi" />
+      </label>
+
+      <label>Renavam:
+        <input [(ngModel)]="vehicle.renavam" name="renavam" />
+      </label>
+
+      <label>Ano:
+        <input type="number" [(ngModel)]="vehicle.ano" name="ano" />
+      </label>
+
+      <div class="button-container">
+        <button type="button" (click)="save()">Salvar</button>
+        <button type="button" (click)="close()">Cancelar</button>
+        <button type="button" (click)="delete()">Deletar</button>
+      </div>
+    </form>
+  </div>
+</div>
