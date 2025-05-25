@@ -1,25 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Vehicle } from '../models/vehicle.model';
+import { RequestModule } from './requestModule';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehiclesService {
-  private baseUrl = 'http://localhost:3000/vehicles';
 
-  constructor(private http: HttpClient) { }
+  constructor(private request: RequestModule) {}
 
-  findAll () {
-    return this.http.get<Vehicle[]>(`${this.baseUrl}`);
+  findAll(): Observable<Vehicle[]> {
+    return this.request.doRequest<Vehicle[]>('get', '');
   }
-  update(vehicle: Vehicle) {    
-    return this.http.patch<Vehicle>(`${this.baseUrl}/${vehicle.id}`, vehicle);
+
+  create(vehicle: Vehicle): Observable<Vehicle> {
+    return this.request.doRequest<Vehicle>('post', '', vehicle);
   }
-  create(vehicle: Vehicle) {    
-    return this.http.post<Vehicle>(`${this.baseUrl}/`, vehicle);
+
+  update(vehicle: Vehicle): Observable<Vehicle> {
+    return this.request.doRequest<Vehicle>('patch', `/${vehicle.id}`, vehicle);
   }
-  delete(vehicle: Vehicle) {
-    return this.http.delete<Vehicle>(`${this.baseUrl}/${vehicle.id}`, {});
+
+  delete(vehicle: Vehicle): Observable<Vehicle> {
+    return this.request.doRequest<Vehicle>('delete', `/${vehicle.id}`);
   }
 }

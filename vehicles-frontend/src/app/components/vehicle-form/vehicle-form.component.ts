@@ -10,11 +10,14 @@ import { Vehicle } from '../../models/vehicle.model';
   templateUrl: './vehicle-form.component.html',
   styleUrls: ['./vehicle-form.component.less']
 })
+
 export class VehicleFormComponent {
   @Input() vehicle: Vehicle | null = null;
   @Output() closed = new EventEmitter<void>();
   @Output() saved = new EventEmitter<Vehicle>();
   @Output() deleted = new EventEmitter<Vehicle>();
+  
+  vehicleKeys: (keyof Vehicle)[] = ['modelo', 'marca', 'ano', 'placa', 'chassi', 'renavam'];
 
   close() {
     this.closed.emit();

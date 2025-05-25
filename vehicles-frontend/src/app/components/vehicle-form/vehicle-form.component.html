@@ -2,36 +2,24 @@
   <div class="backdrop" (click)="close()"></div>
 
   <div class="editform">
-    <h2>Editando: {{ vehicle.modelo }} - {{ vehicle.placa }}</h2>
+    <h2 [textContent]="`Editando: ${vehicle.modelo} - ${vehicle.placa}`"></h2>
     <form>
-      <label>Modelo:
-        <input [(ngModel)]="vehicle.modelo" name="modelo" required />
-      </label>
 
-      <label>Marca:
-        <input [(ngModel)]="vehicle.marca" name="marca" required />
-      </label>
-
-      <label>Placa:
-        <input [(ngModel)]="vehicle.placa" name="placa" required />
-      </label>
-
-      <label>Chassi:
-        <input [(ngModel)]="vehicle.chassi" name="chassi" required />
-      </label>
-
-      <label>Renavam:
-        <input [(ngModel)]="vehicle.renavam" name="renavam" required />
-      </label>
-
-      <label>Ano:
-        <input type="number" [(ngModel)]="vehicle.ano" name="ano" required />
-      </label>
-
+      <div class="field" *ngFor="let key of vehicleKeys">
+        <label [textContent]="key" [for]="key"></label>
+        <input 
+          [(ngModel)]="vehicle[key]" 
+          [ngModelOptions]="{ standalone: true }"
+          [name]="key" 
+          [id]="key" 
+          required
+        />
+      </div>
+      
       <div class="button-container">
         <button type="button" (click)="save()">Salvar</button>
         <button type="button" (click)="close()">Cancelar</button>
-        <button type="button" (click)="delete()">Deletar</button>
+        <button *ngIf="vehicle.id" type="button" (click)="delete()">Deletar</button>
       </div>
     </form>
   </div>
