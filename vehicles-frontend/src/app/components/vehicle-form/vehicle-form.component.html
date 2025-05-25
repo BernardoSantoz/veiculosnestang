@@ -5,27 +5,27 @@
     <h2>Editando: {{ vehicle.modelo }} - {{ vehicle.placa }}</h2>
     <form>
       <label>Modelo:
-        <input [(ngModel)]="vehicle.modelo" name="modelo" />
+        <input [(ngModel)]="vehicle.modelo" name="modelo" required />
       </label>
 
       <label>Marca:
-        <input [(ngModel)]="vehicle.marca" name="marca" />
+        <input [(ngModel)]="vehicle.marca" name="marca" required />
       </label>
 
       <label>Placa:
-        <input [(ngModel)]="vehicle.placa" name="placa" />
+        <input [(ngModel)]="vehicle.placa" name="placa" required />
       </label>
 
       <label>Chassi:
-        <input [(ngModel)]="vehicle.chassi" name="chassi" />
+        <input [(ngModel)]="vehicle.chassi" name="chassi" required />
       </label>
 
       <label>Renavam:
-        <input [(ngModel)]="vehicle.renavam" name="renavam" />
+        <input [(ngModel)]="vehicle.renavam" name="renavam" required />
       </label>
 
       <label>Ano:
-        <input type="number" [(ngModel)]="vehicle.ano" name="ano" />
+        <input type="number" [(ngModel)]="vehicle.ano" name="ano" required />
       </label>
 
       <div class="button-container">

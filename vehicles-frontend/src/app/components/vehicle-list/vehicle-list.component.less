@@ -1,3 +1,4 @@
+@mainColor: rgb(21, 21, 122);
 .vehicle-list {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
   margin: 0 auto;
 
   .card {
+    cursor: pointer;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 16px;
@@ -16,7 +18,7 @@
     &:hover {
       transform: translateY(-4px);
       h3 {
-        color: blue;
+        color: @mainColor;
       }
     }
 
@@ -32,6 +34,35 @@
       font-size: 1rem;
       color: #555;
     }
+  }
+
+  .alert {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    color: white;
+    z-index: 1002;
+    padding: 15px;
+    &.error {
+      background: red;
+    }
+    &.success {
+      background: green;
+    }
+  }
+
+  .add-button {
+    cursor: pointer;
+    position: fixed;
+    font-size: 60px;
+    color: white;
+    background: @mainColor;
+    bottom: 5%;
+    right: 5%;
+    width: 69px;
+    text-align: center;
+    border-radius: 100%;
   }
 
   @media (max-width: 480px) {

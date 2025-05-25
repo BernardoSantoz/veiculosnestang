@@ -1,4 +1,8 @@
 <div class="vehicle-list">
+  <div *ngIf="notificationMessage" class="alert {{ notificationStatus }}">
+    {{ notificationMessage }}
+  </div>
+
   <div *ngFor="let vehicle of vehicles" class="card" (click)="selectVehicle(vehicle)">
     <h3>{{ vehicle.marca }} {{ vehicle.modelo }} ({{ vehicle.ano }})</h3>
     <p><strong>Placa:</strong> {{ vehicle.placa }}</p>
@@ -11,4 +15,5 @@
     (saved)="handleSave($event)"
     (deleted)="handleDelete($event)"
   ></app-vehicle-form>
+  <div class="add-button" (click)="selectVehicle(newEmptyVehicle())">+</div>
 </div>
